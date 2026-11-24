@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>สบู่ธรรมชาติทำมือ | Sabu Natural Soap</title>
+  <meta name="description" content="สบู่ก้อนทำมือจากน้ำมันพืชธรรมชาติ อ่อนโยนต่อผิว กลิ่นหอมจากน้ำมันหอมระเหยแท้ สั่งง่าย ส่งทั่วไทย">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600&family=Sarabun:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#top">🌿 <span id="shopName">สบู่ธรรมชาติทำมือ</span></a>
+  <nav>
+    <a href="#products">สินค้า</a>
+    <a href="#why">ทำไมต้องเรา</a>
+    <a href="#order" class="btn btn-small">สั่งซื้อ</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">Cold-process · ทำมือเป็นล็อตเล็ก</p>
+      <h1>ผิวสะอาด นุ่มชุ่มชื้น<br>ด้วยสบู่จากธรรมชาติ</h1>
+      <p class="lead">สบู่ก้อนหนัก 100 กรัม ผสมน้ำมันมะพร้าว น้ำมันมะกอก และเนยโกโก้ ไม่เติมสีสังเคราะห์ บ่มครบ 4 สัปดาห์ก่อนส่งถึงมือคุณ</p>
+      <div class="cta-row">
+        <a href="#products" class="btn">เลือกสบู่ที่ชอบ</a>
+        <span class="note">ส่งฟรีเมื่อซื้อครบ <b id="freeOver">500</b> บาท</span>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <img src="images/soap-lavender-100.svg" alt="">
+      <img src="images/soap-oatmeal-honey-100.svg" alt="">
+      <img src="images/soap-charcoal-tea-tree-100.svg" alt="">
+    </div>
+  </section>
+
+  <section id="why" class="band">
+    <div class="wrap grid3">
+      <div class="feature"><div class="ico">🫒</div><h3>ส่วนผสมธรรมชาติ</h3><p>น้ำมันพืชคุณภาพ และน้ำมันหอมระเหยแท้ ไม่ใส่ SLS และน้ำหอมสังเคราะห์</p></div>
+      <div class="feature"><div class="ico">⏳</div><h3>บ่มครบ 4 สัปดาห์</h3><p>สบู่แข็งตัวเต็มที่ ใช้ได้นาน ฟองนุ่ม ไม่ละลายง่าย</p></div>
+      <div class="feature"><div class="ico">📦</div><h3>แพ็กตรวจสอบทุกออเดอร์</h3><p>เช็กรายการ SKU ก่อนปิดกล่องทุกครั้ง เพื่อให้ได้สินค้าตรงกับที่สั่ง</p></div>
+    </div>
+  </section>
+
+  <section id="products" class="wrap">
+    <h2>สินค้าของเรา</h2>
+    <p class="sub">เลือกจำนวนที่ต้องการ แล้วเลื่อนลงไปกรอกที่อยู่จัดส่ง</p>
+    <div id="productGrid" class="products" aria-live="polite">
+      <p class="muted">กำลังโหลดสินค้า…</p>
+    </div>
+  </section>
+
+  <section id="order" class="band">
+    <div class="wrap order-layout">
+      <form id="orderForm" class="card" novalidate>
+        <h2>ข้อมูลจัดส่ง</h2>
+        <div class="field-row">
+          <label>ชื่อ-นามสกุล<input name="name" autocomplete="name" required></label>
+          <label>เบอร์โทร<input name="phone" inputmode="tel" autocomplete="tel" placeholder="0812345678" required></label>
+        </div>
+        <label>ที่อยู่ (บ้านเลขที่ ซอย ถนน หมู่บ้าน)<textarea name="address" rows="2" autocomplete="street-address" required></textarea></label>
+        <div class="field-row">
+          <label>ตำบล/แขวง<input name="subdistrict" required></label>
+          <label>อำเภอ/เขต<input name="district" required></label>
+        </div>
+        <div class="field-row">
+          <label>จังหวัด<input name="province" required></label>
+          <label>รหัสไปรษณีย์<input name="postcode" inputmode="numeric" maxlength="5" placeholder="10110" required></label>
+        </div>
+        <fieldset>
+          <legend>วิธีชำระเงิน</legend>
+          <label class="radio"><input type="radio" name="payment" value="transfer" checked> โอนเงิน/พร้อมเพย์</label>
+          <label class="radio"><input type="radio" name="payment" value="cod"> เก็บเงินปลายทาง</label>
+        </fieldset>
+        <label>หมายเหตุ (ถ้ามี)<input name="note" maxlength="200"></label>
+        <!-- honeypot กันบอท: คนจริงมองไม่เห็นและไม่กรอก -->
+        <input type="text" name="website" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+        <p id="formError" class="error" role="alert" hidden></p>
+        <button type="submit" id="submitBtn" class="btn btn-block">ยืนยันสั่งซื้อ</button>
+      </form>
+
+      <aside class="card summary" aria-live="polite">
+        <h2>สรุปคำสั่งซื้อ</h2>
+        <div id="cartLines" class="cart-lines"><p class="muted">ยังไม่ได้เลือกสินค้า</p></div>
+        <dl class="totals">
+          <div><dt>ค่าสินค้า</dt><dd id="subtotal">0</dd></div>
+          <div><dt>ค่าจัดส่ง</dt><dd id="shipping">0</dd></div>
+          <div class="grand"><dt>รวมทั้งสิ้น</dt><dd id="total">0</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <section id="done" class="wrap" hidden>
+    <div class="card success">
+      <h2>🎉 ขอบคุณที่สั่งซื้อ</h2>
+      <p>หมายเลขออเดอร์ของคุณคือ <b id="doneId" class="mono"></b></p>
+      <p id="doneMsg"></p>
+      <button class="btn" id="againBtn">สั่งซื้อเพิ่ม</button>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>© <span id="year"></span> <span id="shopName2"></span> · ติดต่อ <span id="contact"></span></p>
+</footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
